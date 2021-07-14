@@ -141,10 +141,22 @@ img {
 .nav__link {
   color: var(--dark-color);
   font-weight: var(--font-semi);
+
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 
+.nav__item:hover,
 .nav__link:hover {
   color: var(--first-color);
+  cursor: pointer;
+  background-color: var(--first-color-alt);
 }
 
 .nav__logo {
@@ -175,11 +187,14 @@ img {
   background-size: cover;
   height: calc(100vh - var(--header-height));
 }
-
+.home .container {
+  margin-right: 15px;
+  margin-left: 15px;
+}
 .home__social {
   display: grid;
   grid-template-columns: max-content;
-  row-gap: 1rem;
+  margin-top: 30px;
 }
 
 .home__social-icon {
@@ -207,7 +222,7 @@ img {
 .home .intro-text h1 {
   margin: 0;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 32px;
   color: #10cab7;
 }
 .home .intro-text p {

@@ -8,6 +8,7 @@ const showMenu = (toggleId, navId) => {
   if (toggle && nav) {
     toggle.addEventListener("click", () => {
       nav.classList.toggle("show");
+      // Toggle menu icon
       toggle.classList.toggle(menuIcon);
     });
   }
@@ -27,6 +28,7 @@ function linkAction() {
   // REMOVE MENU MOBILE
   const navMenu = document.getElementById("nav-menu");
   navMenu.classList.remove("show");
+  // Toggle menu icon
   toggle.classList.toggle(menuIcon);
 }
 

@@ -1,11 +1,13 @@
 /*========== SHOW MENU ==========*/
 const showMenu = (toggleId, navId) => {
   const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId);
+    nav = document.getElementById(navId),
+    menuIcon = "bx-x";
 
   if (toggle && nav) {
     toggle.addEventListener("click", () => {
       nav.classList.toggle("show");
+      toggle.classList.toggle(menuIcon);
     });
   }
 };

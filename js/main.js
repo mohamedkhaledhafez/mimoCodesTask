@@ -1,8 +1,9 @@
 /*========== SHOW MENU ==========*/
+var menuIcon = "bx-x";
+
 const showMenu = (toggleId, navId) => {
   const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId),
-    menuIcon = "bx-x";
+    nav = document.getElementById(navId);
 
   if (toggle && nav) {
     toggle.addEventListener("click", () => {
@@ -15,7 +16,8 @@ const showMenu = (toggleId, navId) => {
 showMenu("nav-toggle", "nav-menu");
 
 /*========== REMOVE MENU ==========*/
-const navLink = document.querySelectorAll(".nav__link");
+const navLink = document.querySelectorAll(".nav__link"),
+  toggle = document.getElementById("nav-toggle");
 
 function linkAction() {
   // Active link
@@ -25,6 +27,7 @@ function linkAction() {
   // REMOVE MENU MOBILE
   const navMenu = document.getElementById("nav-menu");
   navMenu.classList.remove("show");
+  toggle.classList.toggle(menuIcon);
 }
 
 navLink.forEach((n) => n.addEventListener("click", linkAction));
